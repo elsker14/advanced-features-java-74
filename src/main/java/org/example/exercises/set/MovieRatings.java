@@ -104,6 +104,15 @@ public class MovieRatings {
         * */
 
         // Collections si sort
+        List<Movie> movieSortedList2 = new ArrayList<>(movieUnorderedSet);
+        Collections.sort(
+                movieSortedList2,
+                Comparator
+                        .comparing(Movie::getReleaseDate)
+                        .reversed()
+        );
+        System.out.println("Lista sortata contine:");
+        displayList(movieSortedList2);
     }
 
     public static void displayList(List<Movie> list) {
